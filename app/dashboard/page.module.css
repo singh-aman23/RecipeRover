@@ -1,0 +1,23 @@
+.dashboard {
+    padding: 20px;
+  }
+  .dashboardHeader {
+    margin-bottom: 20px;
+  }
+  
+  .dashboardHeader button{
+    font-size: 1rem;
+    padding: 12px 12px;
+    background-color: #ff385c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; 
+  }
+
+  .dashboardHeader button:hover{
+    background-color: #e3345d;
+    transform: scale(1.05);
+  }

@@ -1,0 +1,45 @@
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ff385c; 
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #f0f0f0;
+}
+
+.getStarted {
+  font-size: 1.25rem;
+  padding: 12px 24px;
+  background-color: #ff385c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.getStarted:hover {
+  background-color: #e3345d;
+  transform: scale(1.05);
+}
+
+.image {
+  max-width: 150px; 
+  margin-bottom: 20px; 
+  border-radius: 35%; 
+  border: 3px solid #ff385c; 
+  transition : transform 0.3s;
+}
+
+.image:hover{
+  transform : scale(1.05);
+}
