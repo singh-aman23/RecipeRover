@@ -3,10 +3,15 @@ import { useState } from "react";
 import Link from "next/link";
 import classes from "./navbar.module.css";
 import { usePathname } from "next/navigation";
+import { signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
+
 
 export default function Navbar() {
+  const {data:session} = useSession();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const path = usePathname();
+  const userName = session?.user?.name;
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -47,12 +52,12 @@ export default function Navbar() {
             alt="dog avatar"
             className={classes.userAvatar}
           />
-          <span className={classes.username}>AMAN</span>{" "}
+          <span className={classes.username}>{userName}</span>{" "}
         </div>
 
         {dropdownOpen && (
           <div className={classes.dropdownMenu}>
-            <button className={classes.dropdownItem}>Log Out</button>
+            <button className={classes.dropdownItem} onClick = {() => signOut()}>Log Out</button>
           </div>
         )}
       </div>

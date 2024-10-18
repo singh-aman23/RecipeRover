@@ -54,6 +54,9 @@
   .submitButton:hover{
     background-color: #e3345d;
     transform: scale(1.05);
+  }
 
-
+  .error{
+    color : red;
+    text-align: center;
   }

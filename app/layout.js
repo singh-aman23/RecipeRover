@@ -1,5 +1,6 @@
 import "./globals.css";
-import { Poppins } from '@next/font/google';
+import { Poppins } from "@next/font/google";
+import { AuthProvider } from "./provider";
 
 export const metadata = {
   title: "RecipeRover",
@@ -9,15 +10,15 @@ export const metadata = {
 
 // Import and configure Poppins font
 const poppins = Poppins({
-  weight: ['400', '600'], 
-  subsets: ['latin'],    
+  weight: ["400", "600"],
+  subsets: ["latin"],
 });
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={poppins.className}>
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
